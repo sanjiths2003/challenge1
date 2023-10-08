@@ -1,0 +1,10 @@
+body{
+    text-align: center;
+    background-image:url("img3.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 100%;
+}
+img{
+    width: 100px;
+    border-radius: 50%;
+}

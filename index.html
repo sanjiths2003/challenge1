@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>email portal</title>
+    <link rel="stylesheet"href="external.css">
+    <script>
+        function checkPattern() {
+            var userInput = document.getElementById("password").value; 
+            var pattern = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$/; 
+
+            if (pattern.test(userInput)) {
+                alert("login successful");
+            } else {
+                alert("login failed"); 
+                return false; 
+            }
+        }
+        </script>
+</head>
+<body><form action="#" method="post" onsubmit="return checkPattern();">
+
+
+    <div>
+        <img src="avatar.jpg">
+        </div><br>
+        <div>
+            <label for="email"name="email"><b>Email:</b></label>
+
+            <input type="email"name="email"placeholder="Enter your Email Id"id="email"><br><br>
+            <label for="password"name="password"><b>Password:</b></label>
+            <input type="password"placeholder="Enter your Password" id="password" name="password" required minlength="8" pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$" title="Password must contain at least 8 characters, including one letter and one digit."><br><br>
+            <button type="submit" value="submit">log in</button>
+        </div>
+        
+</body>
+</html>
